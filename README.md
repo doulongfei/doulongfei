@@ -1,8 +1,11 @@
 ### Yoo, I'm Hays lfdou 👋
 
-[![GitHub](https://img.shields.io/badge/dynamic/json?logo=github&label=GitHub&labelColor=495867&color=495867&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dgithub%26queryKey%3Dhayschan&style=flat-square)](https://github.com/hayschan)
-[![RSS](https://img.shields.io/badge/dynamic/json?logo=rss&logoColor=white&label=RSS&labelColor=95B8D1&color=95B8D1&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dfeedly%257Cinoreader%257CfeedsPub%26queryKey%3Dhttps://haysc.tech/feed.xml&style=flat-square)](https://haysc.tech/)
+[![Focus Repo](https://github-readme-stats.vercel.app/api/pin/?username=doulongfeie&repo=notes&show_owner=true)](https://github.com/doulongfei/notes)
 
+作者：莫比乌斯的code
+链接：https://juejin.cn/post/6884819225266323463
+来源：稀土掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 - ⚡ java / Python.
 - ✍️ [Blogger]([https://haysc.tech](https://blog.csdn.net/dou986532))
 - 🏃 Sailing / Kayak / Scuba Diving / Windsurfing / Table Tennis / Cycling
