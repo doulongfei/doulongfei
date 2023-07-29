@@ -2,7 +2,9 @@
 
 ![1690645833187_header.png](assets/1690645833187_header.png)
 
-### Yoo, I'm Hays lfdou 👋
+[](https://)
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&size=38&center=true&vCenter=true&width=600&lines=Hi,+I+am+lfdou;+Welcome+to+My+Profile!;Over+4+years+of+programming+experience;Always+learning+new+things+;Machine+learning+enthusiast+)](https://blog.csdn.net/dou986532)
 
 #### Thanks for visiting ❤️
 - ⚡ java / Python.
