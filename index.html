@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doulongfei - 开发者作品集</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .repo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .repo-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+        
+        .repo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .repo-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .repo-description {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .repo-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #5a67d8;
+        }
+        
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+        
+        .tech-tag {
+            display: inline-block;
+            background: #f7fafc;
+            color: #4a5568;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin: 2px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            opacity: 0.8;
+            margin-top: 50px;
+        }
+        
+        .stats {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        
+        .stat-item h3 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        
+        .stat-item p {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>doulongfei</h1>
+            <p>全栈开发者 · 开源爱好者 · 技术探索者</p>
+        </div>
+        
+        <div class="stats">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>21</h3>
+                    <p>原创项目</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>技术栈</p>
+                </div>
+                <div class="stat-item">
+                    <h3>31</h3>
+                    <p>总仓库数</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="repo-grid">
+            <div class="repo-card">
+                <div class="repo-name">videoDownload</div>
+                <div class="repo-description">基于Go语言开发的智能视频下载器，具有Web界面和智能视频资源检测功能。支持M3U8、MP4等多种格式，提供实时下载进度监控和RESTful API接口。</div>
+                <div class="tech-tag">Go</div>
+                <div class="tech-tag">Web</div>
+                <div class="tech-tag">M3U8</div>
+                <div class="tech-tag">REST API</div>
+                <div class="repo-links">
+                    <a href="https://github.com/doulongfei/videoDownload" class="btn btn-primary">查看源码</a>
+                    <a href="https://doulongfei.github.io/videoDownload" class="btn btn-secondary">在线演示</a>
+                </div>
+            </div>
+            
+            <div class="repo-card">
+                <div class="repo-name">awsClaudeApi</div>
+                <div class="repo-description">AWS Claude API 转 OpenAI API 格式的转换工具，让你可以在支持OpenAI API的应用中使用Claude模型。</div>
+                <div class="tech-tag">AWS</div>
+                <div class="tech-tag">Claude</div>
+                <div class="tech-tag">OpenAI API</div>
+                <div class="tech-tag">转换器</div>
+                <div class="repo-links">
+                    <a href="https://github.com/doulongfei/awsClaudeApi" class="btn btn-primary">查看源码</a>
+                    <a href="https://doulongfei.github.io/awsClaudeApi" class="btn btn-secondary">文档</a>
+                </div>
+            </div>
+            
+            <div class="repo-card">
+                <div class="repo-name">autoUploadClipboardImg</div>
+                <div class="repo-description">基于Python的Windows剪贴板图片自动上传工具，监听剪贴板变化并自动上传图片到指定服务器，提升工作效率。</div>
+                <div class="tech-tag">Python</div>
+                <div class="tech-tag">Windows</div>
+                <div class="tech-tag">剪贴板</div>
+                <div class="tech-tag">自动化</div>
+                <div class="repo-links">
+                    <a href="https://github.com/doulongfei/autoUploadClipboardImg" class="btn btn-primary">查看源码</a>
+                    <a href="https://doulongfei.github.io/autoUploadClipboardImg" class="btn btn-secondary">使用指南</a>
+                </div>
+            </div>
+            
+            <div class="repo-card">
+                <div class="repo-name">mybatis-sql-run</div>
+                <div class="repo-description">XML中SQL入参模拟器，自动执行SQL语句的调试工具，帮助开发者快速测试和调试MyBatis映射文件中的SQL。</div>
+                <div class="tech-tag">Java</div>
+                <div class="tech-tag">MyBatis</div>
+                <div class="tech-tag">SQL</div>
+                <div class="tech-tag">调试工具</div>
+                <div class="repo-links">
+                    <a href="https://github.com/doulongfei/mybatis-sql-run" class="btn btn-primary">查看源码</a>
+                    <a href="https://doulongfei.github.io/mybatis-sql-run" class="btn btn-secondary">使用说明</a>
+                </div>
+            </div>
+            
+            <div class="repo-card">
+                <div class="repo-name">goStudy</div>
+                <div class="repo-description">Go语言数据结构和算法基础学习项目，包含常用数据结构实现和算法练习，适合Go语言初学者。</div>
+                <div class="tech-tag">Go</div>
+                <div class="tech-tag">数据结构</div>
+                <div class="tech-tag">算法</div>
+                <div class="tech-tag">学习</div>
+                <div class="repo-links">
+                    <a href="https://github.com/doulongfei/goStudy" class="btn btn-primary">查看源码</a>
+                    <a href="https://doulongfei.github.io/goStudy" class="btn btn-secondary">学习笔记</a>
+                </div>
+            </div>
+            
+            <div class="repo-card">
+                <div class="repo-name">DataStructures</div>
+                <div class="repo-description">数据结构算法练习项目，包含各种经典数据结构的实现和算法题解，持续更新中。</div>
+                <div class="tech-tag">算法</div>
+                <div class="tech-tag">数据结构</div>
+                <div class="tech-tag">练习</div>
+                <div class="tech-tag">题解</div>
+                <div class="repo-links">
+                    <a href="https://github.com/doulongfei/DataStructures" class="btn btn-primary">查看源码</a>
+                    <a href="https://doulongfei.github.io/DataStructures" class="btn btn-secondary">题解集合</a>
+                </div>
+            </div>
+            
+            <div class="repo-card">
+                <div class="repo-name">BluetoothBroadcast</div>
+                <div class="repo-description">Android蓝牙广播应用，通过蓝牙分享APK，获取手机5G WiFi支持信息和蓝牙连接状态。</div>
+                <div class="tech-tag">Android</div>
+                <div class="tech-tag">蓝牙</div>
+                <div class="tech-tag">WiFi</div>
+                <div class="tech-tag">移动开发</div>
+                <div class="repo-links">
+                    <a href="https://github.com/doulongfei/BluetoothBroadcast" class="btn btn-primary">查看源码</a>
+                    <a href="https://doulongfei.github.io/BluetoothBroadcast" class="btn btn-secondary">功能演示</a>
+                </div>
+            </div>
+            
+            <div class="repo-card">
+                <div class="repo-name">printTree</div>
+                <div class="repo-description">树形数据结构可视化工具，帮助理解和调试各种树型数据结构，支持多种树的展示格式。</div>
+                <div class="tech-tag">数据结构</div>
+                <div class="tech-tag">可视化</div>
+                <div class="tech-tag">树</div>
+                <div class="tech-tag">调试工具</div>
+                <div class="repo-links">
+                    <a href="https://github.com/doulongfei/printTree" class="btn btn-primary">查看源码</a>
+                    <a href="https://doulongfei.github.io/printTree" class="btn btn-secondary">在线工具</a>
+                </div>
+            </div>
+            
+            <div class="repo-card">
+                <div class="repo-name">neteasecloudmusicapi</div>
+                <div class="repo-description">网易云音乐API接口项目，提供音乐搜索、播放列表、用户信息等功能的API接口。</div>
+                <div class="tech-tag">API</div>
+                <div class="tech-tag">音乐</div>
+                <div class="tech-tag">网易云</div>
+                <div class="tech-tag">接口</div>
+                <div class="repo-links">
+                    <a href="https://github.com/doulongfei/neteasecloudmusicapi" class="btn btn-primary">查看源码</a>
+                    <a href="https://doulongfei.github.io/neteasecloudmusicapi" class="btn btn-secondary">API文档</a>
+                </div>
+            </div>
+            
+            <div class="repo-card">
+                <div class="repo-name">MDText</div>
+                <div class="repo-description">Spring框架学习笔记项目，记录Spring学习过程中的重点知识和实践经验。</div>
+                <div class="tech-tag">Spring</div>
+                <div class="tech-tag">Java</div>
+                <div class="tech-tag">学习笔记</div>
+                <div class="tech-tag">文档</div>
+                <div class="repo-links">
+                    <a href="https://github.com/doulongfei/MDText" class="btn btn-primary">查看源码</a>
+                    <a href="https://doulongfei.github.io/MDText" class="btn btn-secondary">阅读笔记</a>
+                </div>
+            </div>
+            
+            <div class="repo-card">
+                <div class="repo-name">amplify-react-graphql</div>
+                <div class="repo-description">基于AWS Amplify和React的GraphQL应用示例，展示现代全栈Web应用开发最佳实践。</div>
+                <div class="tech-tag">AWS Amplify</div>
+                <div class="tech-tag">React</div>
+                <div class="tech-tag">GraphQL</div>
+                <div class="tech-tag">全栈</div>
+                <div class="repo-links">
+                    <a href="https://github.com/doulongfei/amplify-react-graphql" class="btn btn-primary">查看源码</a>
+                    <a href="https://doulongfei.github.io/amplify-react-graphql" class="btn btn-secondary">在线演示</a>
+                </div>
+            </div>
+            
+            <div class="repo-card">
+                <div class="repo-name">ihrm_parent</div>
+                <div class="repo-description">企业级SAAS人力资源管理系统初始化项目，基于微服务架构设计。</div>
+                <div class="tech-tag">SAAS</div>
+                <div class="tech-tag">微服务</div>
+                <div class="tech-tag">人力资源</div>
+                <div class="tech-tag">企业级</div>
+                <div class="repo-links">
+                    <a href="https://github.com/doulongfei/ihrm_parent" class="btn btn-primary">查看源码</a>
+                    <a href="https://doulongfei.github.io/ihrm_parent" class="btn btn-secondary">项目文档</a>
+                </div>
+            </div>
+            
+            <div class="repo-card">
+                <div class="repo-name">LearnProjectMaven</div>
+                <div class="repo-description">Maven项目管理工具学习项目，包含Maven的配置、依赖管理、构建流程等实践。</div>
+                <div class="tech-tag">Maven</div>
+                <div class="tech-tag">构建工具</div>
+                <div class="tech-tag">Java</div>
+                <div class="tech-tag">项目管理</div>
+                <div class="repo-links">
+                    <a href="https://github.com/doulongfei/LearnProjectMaven" class="btn btn-primary">查看源码</a>
+                    <a href="https://doulongfei.github.io/LearnProjectMaven" class="btn btn-secondary">学习指南</a>
+                </div>
+            </div>
+            
+            <div class="repo-card">
+                <div class="repo-name">GoLangStudy</div>
+                <div class="repo-description">Go语言学习项目，包含Go语言基础语法、并发编程、网络编程等内容的学习记录。</div>
+                <div class="tech-tag">Go</div>
+                <div class="tech-tag">并发编程</div>
+                <div class="tech-tag">网络编程</div>
+                <div class="tech-tag">学习</div>
+                <div class="repo-links">
+                    <a href="https://github.com/doulongfei/GoLangStudy" class="btn btn-primary">查看源码</a>
+                    <a href="https://doulongfei.github.io/GoLangStudy" class="btn btn-secondary">学习路径</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 doulongfei. 持续学习，持续创造。</p>
+            <p>
+                <a href="https://github.com/doulongfei" style="color: white; text-decoration: none;">GitHub</a> |
+                <a href="mailto:your-email@example.com" style="color: white; text-decoration: none;">邮箱联系</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
