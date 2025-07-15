@@ -220,6 +220,36 @@
             font-size: 0.9rem;
             opacity: 0.8;
         }
+        
+        .comments-section {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            color: white;
+        }
+        
+        .comments-section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .comments-description {
+            text-align: center;
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+        
+        #tcomment {
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 20px;
+            min-height: 200px;
+        }
     </style>
 </head>
 <body>
@@ -458,6 +488,14 @@
             </div>
         </div>
         
+        <div class="comments-section">
+            <h2>💬 留言评论</h2>
+            <div class="comments-description">
+                欢迎在这里留下您的想法、建议或者与我交流技术问题！
+            </div>
+            <div id="tcomment"></div>
+        </div>
+        
         <div class="footer">
             <p>&copy; 2025 doulongfei. 持续学习，持续创造。</p>
             <p>
@@ -467,5 +505,14 @@
             </p>
         </div>
     </div>
+    
+    <script src="https://cdn.staticfile.org/twikoo/1.6.39/twikoo.all.min.js"></script>
+    <script>
+        twikoo.init({
+            envId: 'https://twikoo.doufei.eu.org/',
+            el: '#tcomment',
+            lang: 'zh-CN'
+        });
+    </script>
 </body>
 </html>
