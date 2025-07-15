@@ -151,6 +151,75 @@
         .stat-item p {
             opacity: 0.8;
         }
+        
+        .blog-section {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            color: white;
+            text-align: center;
+        }
+        
+        .blog-section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .blog-description {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .blog-link {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .blog-link:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        
+        .blog-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .blog-feature {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid rgba(255,255,255,0.5);
+        }
+        
+        .blog-feature h4 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .blog-feature p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
@@ -173,6 +242,34 @@
                 <div class="stat-item">
                     <h3>31</h3>
                     <p>总仓库数</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="blog-section">
+            <h2>📖 个人博客</h2>
+            <div class="blog-description">
+                记录技术成长路径，分享开发经验与思考。从前端到后端，从算法到架构，
+                在这里您可以找到我的技术文章、学习笔记和项目实战经验分享。
+            </div>
+            <a href="https://doufei.eu.org/" class="blog-link" target="_blank">访问我的博客</a>
+            
+            <div class="blog-features">
+                <div class="blog-feature">
+                    <h4>🚀 技术文章</h4>
+                    <p>深入探讨前后端技术、框架应用与最佳实践</p>
+                </div>
+                <div class="blog-feature">
+                    <h4>💡 学习笔记</h4>
+                    <p>记录学习过程中的重点知识和实践心得</p>
+                </div>
+                <div class="blog-feature">
+                    <h4>🔧 项目实战</h4>
+                    <p>分享项目开发经验、问题解决方案和技术选型</p>
+                </div>
+                <div class="blog-feature">
+                    <h4>🌱 成长思考</h4>
+                    <p>职业发展规划、技术学习方法与个人感悟</p>
                 </div>
             </div>
         </div>
@@ -365,6 +462,7 @@
             <p>&copy; 2025 doulongfei. 持续学习，持续创造。</p>
             <p>
                 <a href="https://github.com/doulongfei" style="color: white; text-decoration: none;">GitHub</a> |
+                <a href="https://doufei.eu.org/" style="color: white; text-decoration: none;">个人博客</a> |
                 <a href="mailto:your-email@example.com" style="color: white; text-decoration: none;">邮箱联系</a>
             </p>
         </div>
