@@ -270,7 +270,7 @@
                     <p>技术栈</p>
                 </div>
                 <div class="stat-item">
-                    <h3 id="total-repos">31</h3>
+                    <h3>32</h3>
                     <p>总仓库数</p>
                 </div>
             </div>
@@ -501,70 +501,6 @@
     
     <script src="https://cdn.staticfile.org/twikoo/1.6.39/twikoo.all.min.js"></script>
     <script>
-        // 获取GitHub仓库总数
-        async function fetchGitHubRepoCount() {
-            try {
-                // 首先尝试获取用户基本信息，这包含了公开仓库总数
-                const userResponse = await fetch('https://api.github.com/users/doulongfei', {
-                    headers: {
-                        'Accept': 'application/vnd.github.v3+json'
-                    }
-                });
-                
-                if (userResponse.ok) {
-                    const userData = await userResponse.json();
-                    let totalRepos = userData.public_repos;
-                    
-                    // 显示公开仓库数量
-                    document.getElementById('total-repos').textContent = totalRepos;
-                    
-                    // 尝试获取所有仓库（包括私有的，如果有访问权限）
-                    const allReposResponse = await fetch('https://api.github.com/user/repos?per_page=100&type=all', {
-                        headers: {
-                            'Accept': 'application/vnd.github.v3+json'
-                        }
-                    });
-                    
-                    if (allReposResponse.ok) {
-                        const allRepos = await allReposResponse.json();
-                        // 如果能获取到所有仓库，使用这个数量（说明用户已登录GitHub）
-                        if (allRepos.length > 0) {
-                            totalRepos = allRepos.length;
-                            
-                            // 处理分页情况
-                            let page = 2;
-                            while (allRepos.length === 100 * (page - 1)) {
-                                const nextPageResponse = await fetch(`https://api.github.com/user/repos?per_page=100&page=${page}&type=all`, {
-                                    headers: {
-                                        'Accept': 'application/vnd.github.v3+json'
-                                    }
-                                });
-                                
-                                if (nextPageResponse.ok) {
-                                    const nextPageRepos = await nextPageResponse.json();
-                                    if (nextPageRepos.length === 0) break;
-                                    totalRepos += nextPageRepos.length;
-                                    page++;
-                                } else {
-                                    break;
-                                }
-                            }
-                            
-                            document.getElementById('total-repos').textContent = totalRepos;
-                        }
-                    }
-                } else {
-                    console.error('获取用户信息失败');
-                }
-            } catch (error) {
-                console.error('获取仓库数量失败:', error);
-                // 保持默认值
-            }
-        }
-
-        // 页面加载完成后获取仓库数量
-        document.addEventListener('DOMContentLoaded', fetchGitHubRepoCount);
-
         twikoo.init({
             envId: 'https://twikoo.doufei.eu.org/',
             el: '#tcomment',
