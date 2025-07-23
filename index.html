@@ -135,6 +135,14 @@
             margin-bottom: 30px;
             text-align: center;
             color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .stats:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
         
         .stats-grid {
@@ -328,7 +336,7 @@
             <p>全栈开发者 · 开源爱好者 · 技术探索者</p>
         </div>
         
-        <div class="stats">
+        <div class="stats" onclick="window.open('https://github.com/doulongfei', '_blank')">
             <div class="stats-grid">
                 <div class="stat-item">
                     <h3>21</h3>
